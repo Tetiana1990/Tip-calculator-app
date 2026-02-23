@@ -35,5 +35,5 @@
 
              #The project works at the link
 
-     https://tetiana1990.github.io/Tip-calculator-app/       
+     [Calculator]https://tetiana1990.github.io/Tip-calculator-app/       
   
