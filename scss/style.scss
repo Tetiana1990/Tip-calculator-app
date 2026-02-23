@@ -1,0 +1,172 @@
+:root {
+	--Green400: hsl(172, 67%, 45%);
+
+	--Green900: hsl(183, 100%, 15%);
+	--Grey500: hsl(186, 14%, 43%);
+	--Grey400: hsl(184, 14%, 56%);
+	--Grey200: hsl(185, 41%, 84%);
+	--Grey50: hsl(189, 47%, 97%);
+	--White: hsl(0, 100%, 100%);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Space Mono", monospace;
+}
+body {
+	background: var(--Grey200);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.wrapper {
+	width: 90%;
+	max-width: 350px;
+}
+.logo {
+	display: block;
+	text-align: center;
+	letter-spacing: 5px;
+	margin: 40px auto;
+}
+.card {
+	background: var(--White);
+	border-radius: 20px;
+	padding: 25px;
+}
+.field {
+	margin-bottom: 20px;
+}
+label {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	margin-bottom: 6px;
+	color: var(--Grey500);
+}
+.input-wrapper {
+	display: flex;
+	align-items: center;
+	background: var(--Grey50);
+	padding: 10px;
+	border-radius: 8px;
+}
+.input-wrapper input {
+	width: 100%;
+	border: none;
+	background: transparent;
+	text-align: right;
+	font-size: 18px;
+	outline: none;
+}
+.input-wrapper:focus-within {
+	outline: 2px solid var(--Grey400);
+}
+.tips {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+.tip-btn,
+#customTip {
+	width: 100%;
+	height: 48px;
+	border-radius: 6px;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+.tip-btn {
+	background: var(--Green900);
+	color: var(--White);
+	border: none;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.tip-btn:hover {
+	background: var(--Green400);
+	color: var(--Green900);
+}
+.tip-btn:active {
+	background: var(--Green400);
+	color: var(--Green900);
+}
+#customTip {
+	padding: 0 10px;
+	border: none;
+	background: var(--Grey50);
+	text-align: right;
+}
+.result {
+	background: var(--Green900);
+	color: var(--White);
+	border-radius: 15px;
+	padding: 20px;
+	margin-top: 20px;
+}
+.result-row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+.result h2 {
+	color: var(--Green400);
+}
+#reset {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	background: var(--Green400);
+	color: var(--Green900);
+	border-radius: 6px;
+	cursor: pointer;
+	font-weight: 700;
+	transition: 0.2s;
+}
+#reset:hover {
+	background: var(--White);
+}
+.error {
+	color: red;
+	font-size: 12px;
+	float: right;
+}
+.input-wrapper.input-error {
+	outline: none;
+	border: 2px solid red;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+	.wrapper {
+		max-width: 700px;
+		margin: 20px auto 0 auto;
+		padding: 20px;
+	}
+	.card {
+		display: flex;
+		gap: 30px;
+	}
+
+	.form,
+	.result {
+		flex: 1;
+	}
+	.result {
+		margin-top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.tips {
+		grid-template-columns: repeat(3, 1f);
+	}
+}
