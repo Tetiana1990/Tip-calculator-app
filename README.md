@@ -33,5 +33,7 @@
     4.View the tip per person and total per person.
     5.Press RESET to clear all fields and start over.
 
+             #The project works at the link
+
      https://tetiana1990.github.io/Tip-calculator-app/       
   
